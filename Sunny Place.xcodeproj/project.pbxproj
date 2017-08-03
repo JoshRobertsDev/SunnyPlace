@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02382FD683CE4EFDF41DD697 /* Pods_Sunny_PlaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FCB2940C3A9BE91E00DF45 /* Pods_Sunny_PlaceTests.framework */; };
 		03307C9D1F31E2CE00A08A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307C9C1F31E2CE00A08A12 /* AppDelegate.swift */; };
-		03307C9F1F31E2CE00A08A12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307C9E1F31E2CE00A08A12 /* ViewController.swift */; };
+		03307C9F1F31E2CE00A08A12 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307C9E1F31E2CE00A08A12 /* WeatherViewController.swift */; };
 		03307CA21F31E2CE00A08A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03307CA01F31E2CE00A08A12 /* Main.storyboard */; };
 		03307CA41F31E2CE00A08A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03307CA31F31E2CE00A08A12 /* Assets.xcassets */; };
 		03307CA71F31E2CE00A08A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03307CA51F31E2CE00A08A12 /* LaunchScreen.storyboard */; };
@@ -29,7 +30,13 @@
 		03307CE91F32123B00A08A12 /* WeatherOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CE81F32123B00A08A12 /* WeatherOverview.swift */; };
 		03307CEB1F3215BA00A08A12 /* WeatherKeyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CEA1F3215BA00A08A12 /* WeatherKeyInformation.swift */; };
 		03307CED1F321A8F00A08A12 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CEC1F321A8F00A08A12 /* SessionManager.swift */; };
+		036B43661F338242008DEC8F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B43641F338242008DEC8F /* WeatherTableViewCell.swift */; };
+		036B43671F338242008DEC8F /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036B43651F338242008DEC8F /* WeatherTableViewCell.xib */; };
+		036B436A1F339D2A008DEC8F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B43691F339D2A008DEC8F /* WeatherViewModel.swift */; };
+		036B436D1F339E00008DEC8F /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B436C1F339E00008DEC8F /* Temperature.swift */; };
 		03E225D21F335B0300AD9351 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E225D11F335B0300AD9351 /* ParameterEncoding.swift */; };
+		03E225D51F3372B800AD9351 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E225D41F3372B800AD9351 /* LocationService.swift */; };
+		C504AB0F202EB4839E9BAB90 /* Pods_Sunny_Place.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005A5C3DB221CEA464B5340B /* Pods_Sunny_Place.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		005A5C3DB221CEA464B5340B /* Pods_Sunny_Place.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny_Place.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03307C991F31E2CE00A08A12 /* Sunny Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sunny Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03307C9C1F31E2CE00A08A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03307C9E1F31E2CE00A08A12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03307C9E1F31E2CE00A08A12 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		03307CA11F31E2CE00A08A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03307CA31F31E2CE00A08A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03307CA61F31E2CE00A08A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,7 +77,17 @@
 		03307CE81F32123B00A08A12 /* WeatherOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOverview.swift; sourceTree = "<group>"; };
 		03307CEA1F3215BA00A08A12 /* WeatherKeyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKeyInformation.swift; sourceTree = "<group>"; };
 		03307CEC1F321A8F00A08A12 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		036B43641F338242008DEC8F /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		036B43651F338242008DEC8F /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
+		036B43691F339D2A008DEC8F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		036B436C1F339E00008DEC8F /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		03E225D11F335B0300AD9351 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		03E225D41F3372B800AD9351 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		0AB5509C9544B683B5973585 /* Pods-Sunny PlaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny PlaceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny PlaceTests/Pods-Sunny PlaceTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2A9DEB433465FC1A72FE901 /* Pods-Sunny Place.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny Place.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny Place/Pods-Sunny Place.release.xcconfig"; sourceTree = "<group>"; };
+		B8FCB2940C3A9BE91E00DF45 /* Pods_Sunny_PlaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny_PlaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F5D2CA3A1F7CD6864D84B7 /* Pods-Sunny PlaceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny PlaceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny PlaceTests/Pods-Sunny PlaceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA6F6F91B9D38A16ED4B891B /* Pods-Sunny Place.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny Place.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny Place/Pods-Sunny Place.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C504AB0F202EB4839E9BAB90 /* Pods_Sunny_Place.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02382FD683CE4EFDF41DD697 /* Pods_Sunny_PlaceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +116,8 @@
 				03307C9B1F31E2CE00A08A12 /* Sunny Place */,
 				03307CB01F31E2CE00A08A12 /* Sunny PlaceTests */,
 				03307C9A1F31E2CE00A08A12 /* Products */,
+				2930050D62869EC2F059ACDD /* Pods */,
+				246F4AF7DAB94CDD93B5C8AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,12 +136,14 @@
 				03307C9C1F31E2CE00A08A12 /* AppDelegate.swift */,
 				03307CE11F320B0900A08A12 /* Constants */,
 				03307CBE1F31E2F700A08A12 /* Extensions */,
+				03E225D31F33729700AD9351 /* Location */,
 				03307CBC1F31E2E900A08A12 /* Models */,
 				03307CBD1F31E2F300A08A12 /* Network */,
 				03307CCB1F31E4E900A08A12 /* Protocols */,
 				03307CC21F31E30E00A08A12 /* Resources */,
 				03307CBF1F31E2FB00A08A12 /* Storyboards */,
 				03307CC31F31E31300A08A12 /* Supporting Files */,
+				036B436B1F339DE9008DEC8F /* Util */,
 				03307CC01F31E30100A08A12 /* View Controllers */,
 				03307CC11F31E30A00A08A12 /* Views */,
 			);
@@ -138,6 +162,7 @@
 		03307CBC1F31E2E900A08A12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				036B43681F339D20008DEC8F /* View Models */,
 				03307CE61F32100800A08A12 /* Coordinates.swift */,
 				03307CEA1F3215BA00A08A12 /* WeatherKeyInformation.swift */,
 				03307CE41F320DE200A08A12 /* WeatherLocation.swift */,
@@ -177,7 +202,7 @@
 		03307CC01F31E30100A08A12 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				03307C9E1F31E2CE00A08A12 /* ViewController.swift */,
+				03307C9E1F31E2CE00A08A12 /* WeatherViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -185,6 +210,7 @@
 		03307CC11F31E30A00A08A12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				036B43631F33822D008DEC8F /* Weather Cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,8 +235,6 @@
 		03307CCB1F31E4E900A08A12 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				03307CCC1F31E51200A08A12 /* URLRequestConvertible.swift */,
-				03307CD21F31E88800A08A12 /* URLRoutable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -247,6 +271,8 @@
 				03307CD01F31E68E00A08A12 /* HTTPMethod.swift */,
 				03307CD51F31EADD00A08A12 /* SPError.swift */,
 				03E225D11F335B0300AD9351 /* ParameterEncoding.swift */,
+				03307CCC1F31E51200A08A12 /* URLRequestConvertible.swift */,
+				03307CD21F31E88800A08A12 /* URLRoutable.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -275,6 +301,59 @@
 			path = "Session Management";
 			sourceTree = "<group>";
 		};
+		036B43631F33822D008DEC8F /* Weather Cell */ = {
+			isa = PBXGroup;
+			children = (
+				036B43641F338242008DEC8F /* WeatherTableViewCell.swift */,
+				036B43651F338242008DEC8F /* WeatherTableViewCell.xib */,
+			);
+			path = "Weather Cell";
+			sourceTree = "<group>";
+		};
+		036B43681F339D20008DEC8F /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				036B43691F339D2A008DEC8F /* WeatherViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		036B436B1F339DE9008DEC8F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				036B436C1F339E00008DEC8F /* Temperature.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		03E225D31F33729700AD9351 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				03E225D41F3372B800AD9351 /* LocationService.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		246F4AF7DAB94CDD93B5C8AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				005A5C3DB221CEA464B5340B /* Pods_Sunny_Place.framework */,
+				B8FCB2940C3A9BE91E00DF45 /* Pods_Sunny_PlaceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2930050D62869EC2F059ACDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F6F91B9D38A16ED4B891B /* Pods-Sunny Place.debug.xcconfig */,
+				A2A9DEB433465FC1A72FE901 /* Pods-Sunny Place.release.xcconfig */,
+				D0F5D2CA3A1F7CD6864D84B7 /* Pods-Sunny PlaceTests.debug.xcconfig */,
+				0AB5509C9544B683B5973585 /* Pods-Sunny PlaceTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,9 +361,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03307CB61F31E2CE00A08A12 /* Build configuration list for PBXNativeTarget "Sunny Place" */;
 			buildPhases = (
+				BC85499A1B78C83639F9E686 /* [CP] Check Pods Manifest.lock */,
 				03307C951F31E2CE00A08A12 /* Sources */,
 				03307C961F31E2CE00A08A12 /* Frameworks */,
 				03307C971F31E2CE00A08A12 /* Resources */,
+				201D6E4D01F036E24883AF82 /* [CP] Embed Pods Frameworks */,
+				F4A50377CA363C3CDD602D1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,9 +381,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03307CB91F31E2CE00A08A12 /* Build configuration list for PBXNativeTarget "Sunny PlaceTests" */;
 			buildPhases = (
+				F9AEC9860137AC9BB6EE1FA5 /* [CP] Check Pods Manifest.lock */,
 				03307CA91F31E2CE00A08A12 /* Sources */,
 				03307CAA1F31E2CE00A08A12 /* Frameworks */,
 				03307CAB1F31E2CE00A08A12 /* Resources */,
+				6D8453689A2759EB3424A928 /* [CP] Embed Pods Frameworks */,
+				534952980D944EBD66079594 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,6 +443,7 @@
 			files = (
 				03307CA71F31E2CE00A08A12 /* LaunchScreen.storyboard in Resources */,
 				03307CC51F31E33300A08A12 /* Default-568h@2x.png in Resources */,
+				036B43671F338242008DEC8F /* WeatherTableViewCell.xib in Resources */,
 				03307CA41F31E2CE00A08A12 /* Assets.xcassets in Resources */,
 				03307CA21F31E2CE00A08A12 /* Main.storyboard in Resources */,
 			);
@@ -372,19 +458,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		201D6E4D01F036E24883AF82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunny Place/Pods-Sunny Place-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		534952980D944EBD66079594 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunny PlaceTests/Pods-Sunny PlaceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D8453689A2759EB3424A928 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunny PlaceTests/Pods-Sunny PlaceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC85499A1B78C83639F9E686 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F4A50377CA363C3CDD602D1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunny Place/Pods-Sunny Place-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9AEC9860137AC9BB6EE1FA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03307C951F31E2CE00A08A12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036B43661F338242008DEC8F /* WeatherTableViewCell.swift in Sources */,
 				03307CD61F31EADD00A08A12 /* SPError.swift in Sources */,
 				03307CC71F31E39E00A08A12 /* OpenWeatherMapRouter.swift in Sources */,
-				03307C9F1F31E2CE00A08A12 /* ViewController.swift in Sources */,
+				03307C9F1F31E2CE00A08A12 /* WeatherViewController.swift in Sources */,
 				03307CD11F31E68E00A08A12 /* HTTPMethod.swift in Sources */,
 				03307CE91F32123B00A08A12 /* WeatherOverview.swift in Sources */,
 				03307CEB1F3215BA00A08A12 /* WeatherKeyInformation.swift in Sources */,
+				03E225D51F3372B800AD9351 /* LocationService.swift in Sources */,
 				03307CD31F31E88800A08A12 /* URLRoutable.swift in Sources */,
 				03307CDD1F3208F700A08A12 /* URLRequest+SunnyPlace.swift in Sources */,
+				036B436A1F339D2A008DEC8F /* WeatherViewModel.swift in Sources */,
+				036B436D1F339E00008DEC8F /* Temperature.swift in Sources */,
 				03307CE01F320AC600A08A12 /* API+OpenWeatherMaps.swift in Sources */,
 				03307CCD1F31E51200A08A12 /* URLRequestConvertible.swift in Sources */,
 				03307C9D1F31E2CE00A08A12 /* AppDelegate.swift in Sources */,
@@ -547,6 +730,7 @@
 		};
 		03307CB71F31E2CE00A08A12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6F6F91B9D38A16ED4B891B /* Pods-Sunny Place.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7X6NV3X765;
@@ -562,6 +746,7 @@
 		};
 		03307CB81F31E2CE00A08A12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2A9DEB433465FC1A72FE901 /* Pods-Sunny Place.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7X6NV3X765;
@@ -577,6 +762,7 @@
 		};
 		03307CBA1F31E2CE00A08A12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0F5D2CA3A1F7CD6864D84B7 /* Pods-Sunny PlaceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -593,6 +779,7 @@
 		};
 		03307CBB1F31E2CE00A08A12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AB5509C9544B683B5973585 /* Pods-Sunny PlaceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
