@@ -12,7 +12,7 @@ struct Coordinatates: Codable {
     var latitude: Double
     var longitude: Double
     
-    enum SerializationKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case latitude = "lat"
         case longitude = "lon"
     }

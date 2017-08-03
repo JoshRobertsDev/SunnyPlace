@@ -14,7 +14,7 @@ struct WeatherLocation: Codable {
     var weather: [WeatherOverview]
     var keyInfo: WeatherKeyInformation
     
-    enum SerializationKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case name
         case coordinates = "coord"
         case weather

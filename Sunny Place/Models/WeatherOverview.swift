@@ -14,7 +14,10 @@ struct WeatherOverview: Codable {
     var description: String
     var icon: String
     
-    enum SerializationKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case wid = "id"
+        case main
+        case description
+        case icon
     }
 }

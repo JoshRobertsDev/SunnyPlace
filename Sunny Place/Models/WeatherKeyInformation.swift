@@ -15,7 +15,7 @@ struct WeatherKeyInformation: Codable {
     var pressure: Int
     var humidity: Int
     
-    enum SerializationKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case temperature = "temp"
         case temperatureMax = "temp_max"
         case temperatureMin = "temp_min"
