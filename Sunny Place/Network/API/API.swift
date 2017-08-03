@@ -13,10 +13,14 @@ class API {
     class func request(_ urlRequestConvertible: URLRequestConvertible, completion: @escaping ((Data?, URLResponse?, Error?) -> Void)) {
         do {
             try SessionManager.default.session.dataTask(with: urlRequestConvertible.asURLRquest()) { (data, response, error) in
-                completion(data, response, error)
+                DispatchQueue.main.async {
+                    completion(data, response, error)
+                }
             }.resume()
         } catch {
-            completion(nil, nil, error)
+            DispatchQueue.main.async {
+                completion(nil, nil, error)
+            }
         }
     }
 }
