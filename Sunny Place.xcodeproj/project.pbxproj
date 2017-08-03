@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		02382FD683CE4EFDF41DD697 /* Pods_Sunny_PlaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FCB2940C3A9BE91E00DF45 /* Pods_Sunny_PlaceTests.framework */; };
+		031706AA1F33D00D00127E73 /* WindUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031706A91F33D00D00127E73 /* WindUtil.swift */; };
+		031706AC1F33D59C00127E73 /* WindUtilSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031706AB1F33D59C00127E73 /* WindUtilSpec.swift */; };
 		03307C9D1F31E2CE00A08A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307C9C1F31E2CE00A08A12 /* AppDelegate.swift */; };
 		03307C9F1F31E2CE00A08A12 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307C9E1F31E2CE00A08A12 /* WeatherViewController.swift */; };
 		03307CA21F31E2CE00A08A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03307CA01F31E2CE00A08A12 /* Main.storyboard */; };
 		03307CA41F31E2CE00A08A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03307CA31F31E2CE00A08A12 /* Assets.xcassets */; };
 		03307CA71F31E2CE00A08A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03307CA51F31E2CE00A08A12 /* LaunchScreen.storyboard */; };
-		03307CB21F31E2CE00A08A12 /* Sunny_PlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CB11F31E2CE00A08A12 /* Sunny_PlaceTests.swift */; };
 		03307CC51F31E33300A08A12 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03307CC41F31E33300A08A12 /* Default-568h@2x.png */; };
 		03307CC71F31E39E00A08A12 /* OpenWeatherMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CC61F31E39E00A08A12 /* OpenWeatherMapRouter.swift */; };
 		03307CCA1F31E3D400A08A12 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CC91F31E3D400A08A12 /* NetworkConstants.swift */; };
@@ -30,10 +31,11 @@
 		03307CE91F32123B00A08A12 /* WeatherOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CE81F32123B00A08A12 /* WeatherOverview.swift */; };
 		03307CEB1F3215BA00A08A12 /* WeatherKeyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CEA1F3215BA00A08A12 /* WeatherKeyInformation.swift */; };
 		03307CED1F321A8F00A08A12 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03307CEC1F321A8F00A08A12 /* SessionManager.swift */; };
-		036B43661F338242008DEC8F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B43641F338242008DEC8F /* WeatherTableViewCell.swift */; };
-		036B43671F338242008DEC8F /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036B43651F338242008DEC8F /* WeatherTableViewCell.xib */; };
+		036B43661F338242008DEC8F /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B43641F338242008DEC8F /* WeatherCollectionViewCell.swift */; };
+		036B43671F338242008DEC8F /* WeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036B43651F338242008DEC8F /* WeatherCollectionViewCell.xib */; };
 		036B436A1F339D2A008DEC8F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B43691F339D2A008DEC8F /* WeatherViewModel.swift */; };
-		036B436D1F339E00008DEC8F /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B436C1F339E00008DEC8F /* Temperature.swift */; };
+		036B436D1F339E00008DEC8F /* TemperatureUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B436C1F339E00008DEC8F /* TemperatureUtil.swift */; };
+		036B43711F33A315008DEC8F /* TemperatureSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B43701F33A315008DEC8F /* TemperatureSpec.swift */; };
 		03E225D21F335B0300AD9351 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E225D11F335B0300AD9351 /* ParameterEncoding.swift */; };
 		03E225D51F3372B800AD9351 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E225D41F3372B800AD9351 /* LocationService.swift */; };
 		C504AB0F202EB4839E9BAB90 /* Pods_Sunny_Place.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005A5C3DB221CEA464B5340B /* Pods_Sunny_Place.framework */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		005A5C3DB221CEA464B5340B /* Pods_Sunny_Place.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny_Place.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		031706A91F33D00D00127E73 /* WindUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindUtil.swift; sourceTree = "<group>"; };
+		031706AB1F33D59C00127E73 /* WindUtilSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindUtilSpec.swift; sourceTree = "<group>"; };
 		03307C991F31E2CE00A08A12 /* Sunny Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sunny Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03307C9C1F31E2CE00A08A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03307C9E1F31E2CE00A08A12 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +63,6 @@
 		03307CA61F31E2CE00A08A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03307CA81F31E2CE00A08A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03307CAD1F31E2CE00A08A12 /* Sunny PlaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sunny PlaceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		03307CB11F31E2CE00A08A12 /* Sunny_PlaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sunny_PlaceTests.swift; sourceTree = "<group>"; };
 		03307CB31F31E2CE00A08A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03307CC41F31E33300A08A12 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		03307CC61F31E39E00A08A12 /* OpenWeatherMapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapRouter.swift; sourceTree = "<group>"; };
@@ -77,10 +80,11 @@
 		03307CE81F32123B00A08A12 /* WeatherOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOverview.swift; sourceTree = "<group>"; };
 		03307CEA1F3215BA00A08A12 /* WeatherKeyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKeyInformation.swift; sourceTree = "<group>"; };
 		03307CEC1F321A8F00A08A12 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		036B43641F338242008DEC8F /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
-		036B43651F338242008DEC8F /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
+		036B43641F338242008DEC8F /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		036B43651F338242008DEC8F /* WeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCollectionViewCell.xib; sourceTree = "<group>"; };
 		036B43691F339D2A008DEC8F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
-		036B436C1F339E00008DEC8F /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		036B436C1F339E00008DEC8F /* TemperatureUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUtil.swift; sourceTree = "<group>"; };
+		036B43701F33A315008DEC8F /* TemperatureSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSpec.swift; sourceTree = "<group>"; };
 		03E225D11F335B0300AD9351 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		03E225D41F3372B800AD9351 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		0AB5509C9544B683B5973585 /* Pods-Sunny PlaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny PlaceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny PlaceTests/Pods-Sunny PlaceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,8 +157,9 @@
 		03307CB01F31E2CE00A08A12 /* Sunny PlaceTests */ = {
 			isa = PBXGroup;
 			children = (
-				03307CB11F31E2CE00A08A12 /* Sunny_PlaceTests.swift */,
 				03307CB31F31E2CE00A08A12 /* Info.plist */,
+				036B43701F33A315008DEC8F /* TemperatureSpec.swift */,
+				031706AB1F33D59C00127E73 /* WindUtilSpec.swift */,
 			);
 			path = "Sunny PlaceTests";
 			sourceTree = "<group>";
@@ -304,8 +309,8 @@
 		036B43631F33822D008DEC8F /* Weather Cell */ = {
 			isa = PBXGroup;
 			children = (
-				036B43641F338242008DEC8F /* WeatherTableViewCell.swift */,
-				036B43651F338242008DEC8F /* WeatherTableViewCell.xib */,
+				036B43641F338242008DEC8F /* WeatherCollectionViewCell.swift */,
+				036B43651F338242008DEC8F /* WeatherCollectionViewCell.xib */,
 			);
 			path = "Weather Cell";
 			sourceTree = "<group>";
@@ -321,7 +326,8 @@
 		036B436B1F339DE9008DEC8F /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				036B436C1F339E00008DEC8F /* Temperature.swift */,
+				036B436C1F339E00008DEC8F /* TemperatureUtil.swift */,
+				031706A91F33D00D00127E73 /* WindUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -443,7 +449,7 @@
 			files = (
 				03307CA71F31E2CE00A08A12 /* LaunchScreen.storyboard in Resources */,
 				03307CC51F31E33300A08A12 /* Default-568h@2x.png in Resources */,
-				036B43671F338242008DEC8F /* WeatherTableViewCell.xib in Resources */,
+				036B43671F338242008DEC8F /* WeatherCollectionViewCell.xib in Resources */,
 				03307CA41F31E2CE00A08A12 /* Assets.xcassets in Resources */,
 				03307CA21F31E2CE00A08A12 /* Main.storyboard in Resources */,
 			);
@@ -556,7 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				036B43661F338242008DEC8F /* WeatherTableViewCell.swift in Sources */,
+				036B43661F338242008DEC8F /* WeatherCollectionViewCell.swift in Sources */,
 				03307CD61F31EADD00A08A12 /* SPError.swift in Sources */,
 				03307CC71F31E39E00A08A12 /* OpenWeatherMapRouter.swift in Sources */,
 				03307C9F1F31E2CE00A08A12 /* WeatherViewController.swift in Sources */,
@@ -567,8 +573,9 @@
 				03307CD31F31E88800A08A12 /* URLRoutable.swift in Sources */,
 				03307CDD1F3208F700A08A12 /* URLRequest+SunnyPlace.swift in Sources */,
 				036B436A1F339D2A008DEC8F /* WeatherViewModel.swift in Sources */,
-				036B436D1F339E00008DEC8F /* Temperature.swift in Sources */,
+				036B436D1F339E00008DEC8F /* TemperatureUtil.swift in Sources */,
 				03307CE01F320AC600A08A12 /* API+OpenWeatherMaps.swift in Sources */,
+				031706AA1F33D00D00127E73 /* WindUtil.swift in Sources */,
 				03307CCD1F31E51200A08A12 /* URLRequestConvertible.swift in Sources */,
 				03307C9D1F31E2CE00A08A12 /* AppDelegate.swift in Sources */,
 				03307CE71F32100800A08A12 /* Coordinates.swift in Sources */,
@@ -585,7 +592,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03307CB21F31E2CE00A08A12 /* Sunny_PlaceTests.swift in Sources */,
+				031706AC1F33D59C00127E73 /* WindUtilSpec.swift in Sources */,
+				036B43711F33A315008DEC8F /* TemperatureSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,7 +779,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.joshroberts.Sunny-PlaceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sunny Place.app/Sunny Place";
 			};
@@ -788,7 +796,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.joshroberts.Sunny-PlaceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sunny Place.app/Sunny Place";
 			};
