@@ -28,16 +28,16 @@ enum OpenWeatherMapRouter: URLRoutable {
 extension OpenWeatherMapRouter: URLRequestConvertible {
     
     func asURLRquest() throws -> URLRequest {
-        let url = try OpenWeatherMapRouter.baseURL.asURL()
+        let url = try OpenWeatherMapRouter.baseURL.asURL().appendingPathComponent(path)
         
-        let headers: [String: String]? = {
+        let parameters: Parameters? = {
             switch self {
             case .findWeather(let latitude, let longitude, let maxWeatherStations):
-                return ["lat": String(latitude), "lon": String(longitude), "cnt": String(maxWeatherStations)]
+                return ["appid": Constants.openWeatherMapsAPIKey.rawValue, "lat": latitude, "lon": longitude, "cnt": maxWeatherStations]
             }
         }()
         
-        let urlRequest = URLRequest(url: url, method: method, headers: headers)
+        let urlRequest = URLRequest(url: url, method: method, parameters: parameters)
         return urlRequest
     }
 }

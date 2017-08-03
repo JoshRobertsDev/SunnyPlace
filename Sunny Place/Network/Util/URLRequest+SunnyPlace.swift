@@ -10,12 +10,20 @@ import Foundation
 
 extension URLRequest {
     
-    init(url: URL, method: HTTPMethod, headers: [String: String]? = nil) {
+    init(url: URL, method: HTTPMethod, parameters: Parameters? = nil) {
         self.init(url: url)
         self.httpMethod = method.rawValue
         
-        headers?.forEach { header, value in
-            self.setValue(value, forHTTPHeaderField: header)
+        guard let parameters = parameters else { return }
+        
+        if method == .get  {
+            var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+            let existingQuery = components.percentEncodedQuery != nil ? components.percentEncodedQuery! + "&" : ""
+            let newQuery = existingQuery + ParameterEncoding.encodedQuery(fromParameters: parameters)
+            components.percentEncodedQuery = newQuery
+            self.url = components.url
+        } else {
+            // implementation for other HTTP methods
         }
     }
 }
