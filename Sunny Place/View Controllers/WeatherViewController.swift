@@ -20,6 +20,8 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        backgroundImageView.image = UIImage()
+        
         flowLayout.scrollDirection = .horizontal
         flowLayout.sectionInset = .zero
         flowLayout.minimumLineSpacing = 0
