@@ -10,7 +10,9 @@ import Foundation
 
 extension API {
     
-    class func requestWeather(forLatitude latitude: Double, longitude: Double, response: @escaping (([WeatherLocation]?, Error?) -> Void)) {
+    typealias LocationWeatherCompletionHandler = (([WeatherLocation]?, Error?) -> Void)
+    
+    class func requestWeather(forLatitude latitude: Double, longitude: Double, response: @escaping LocationWeatherCompletionHandler) {
         API.request(OpenWeatherMapRouter.findWeather(latitude: latitude, longitude: longitude, maxWeatherStations: 15), completion: { data, urlResponse, error in
             guard error == nil else { response(nil, error!); return }
             guard let data = data else { response(nil, SPError.noData); return }
