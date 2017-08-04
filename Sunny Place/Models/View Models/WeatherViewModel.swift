@@ -30,6 +30,15 @@ class WeatherViewModel: NSObject {
         self.locationService.delegate = self
         self.locationService.requestOneTimeLocation()
     }
+    
+    func fallbackToOfflineStore() {
+        print("falling back to weather from storage if possible")
+        if let weatherLocations = StorageManager.documentStore.retrieveMostRecentWeatherLocations() {
+            self.weatherLocations = weatherLocations.map { weatherLocation in WeatherLocationViewModel(weatherLocation) }
+        } else {
+            print("no offline store found")
+        }
+    }
 }
 
 extension WeatherViewModel: LocationServiceDelegate {
@@ -39,13 +48,27 @@ extension WeatherViewModel: LocationServiceDelegate {
         let longiture = location.coordinate.longitude
         
         API.requestWeather(forLatitude: latitude, longitude: longiture, response: { [weak self] (weatherLocations, error) in
-            guard error == nil else { return }
-            guard let weatherLocations = weatherLocations else { return }
+            guard error == nil, let weatherLocations = weatherLocations else {
+                print(error!)
+                print("failed to get weather")
+                self?.fallbackToOfflineStore()
+                return
+            }
+
+            if StorageManager.documentStore.persistMostRecentWeatherLocations(weatherLocations) {
+                print("successfully stored weather")
+            } else {
+                print("failed to store weather - should handle this properly in a production app")
+            }
             self?.weatherLocations = weatherLocations.map { weatherLocation in WeatherLocationViewModel(weatherLocation) }
         })
     }
     
     func locationDidFail(withError error: Error) {
         print(error)
+        if locationService.lastKnownLocation == nil {
+            print("No locations have been found yet - should handle this properly to find out why")
+            fallbackToOfflineStore()
+        }
     }
 }
