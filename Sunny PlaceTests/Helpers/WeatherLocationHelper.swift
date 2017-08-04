@@ -16,7 +16,8 @@ struct WeatherLocationHelper {
             coordinates: Coordinatates(latitude: 1, longitude: -1),
             weather: [WeatherOverview(wid: 804, main: "Clouds", description: "overcast clouds", icon: "04n")],
             keyInfo: WeatherKeyInformation(temperature: 288.15, temperatureMax: 289.15, temperatureMin: 287.15, pressure: 1009, humidity: 77),
-            wind: Wind(speed: 20, degrees: 45)
+            wind: Wind(speed: 20, degrees: 45),
+            timestamp: 1501860221
         )
     }
 }
