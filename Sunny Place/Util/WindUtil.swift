@@ -55,4 +55,16 @@ struct WindUtil {
     static func arrow(forDegreeDirection degrees: Int) -> String {
         return arrowForWindDirection(closestWindDirection(forDegreeDirection: degrees))
     }
+    
+    enum SpeedUnit: String {
+        case milesPerHour = "mph"
+        case kmPerHour = "km/h"
+    }
+    
+    static func convert(metresPerSecond: Double, to unit: SpeedUnit) -> Int {
+        switch unit {
+        case .kmPerHour: return Int(round(metresPerSecond * 3.6))
+        case .milesPerHour: return Int(round(metresPerSecond * 2.2369362920544))
+        }
+    }
 }

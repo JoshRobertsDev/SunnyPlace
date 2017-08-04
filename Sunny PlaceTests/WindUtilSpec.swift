@@ -64,5 +64,20 @@ class WindUtilSpec: QuickSpec {
             }
         }
         
+        describe("a wind speed converter") {
+            var speedInMPS: Double!
+            beforeEach {
+                speedInMPS = 120
+            }
+            
+            it("should convert metres per second into km per hour") {
+                expect(WindUtil.convert(metresPerSecond: speedInMPS, to: .kmPerHour)).to(equal(432))
+            }
+            
+            it("should convert metres per second into mile per hour") {
+                expect(WindUtil.convert(metresPerSecond: speedInMPS, to: .milesPerHour)).to(equal(268))
+            }
+        }
+        
     }
 }

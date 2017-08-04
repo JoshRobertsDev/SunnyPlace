@@ -8,24 +8,17 @@
 
 import Foundation
 
-enum TemperatureScale {
-    case celsius
-    case fahrenheit
+enum TemperatureScale: String {
+    case celsius = "°C"
+    case fahrenheit = "°F"
 }
 
-struct Temperature {
+struct TemperatureUtil {
     
     static func convert(kelvin: Double, to scale: TemperatureScale) -> Int {
         switch scale {
         case .celsius: return Int(round(kelvin - 273.15))
         case .fahrenheit: return Int(round(kelvin * 9 / 5 - 459.67))
-        }
-    }
-    
-    static func suffix(for scale: TemperatureScale) -> String {
-        switch scale {
-        case .celsius: return "°C"
-        case .fahrenheit: return "°F"
         }
     }
 }

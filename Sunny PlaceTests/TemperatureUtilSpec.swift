@@ -10,7 +10,7 @@ import Quick
 import Nimble
 @testable import Sunny_Place
 
-class TemperatureSpec: QuickSpec {
+class TemperatureUtilSpec: QuickSpec {
 
     override func spec() {
 
@@ -21,21 +21,13 @@ class TemperatureSpec: QuickSpec {
             }
 
             it("should convert kelvin into celsius") {
-                let celsius = Temperature.convert(kelvin: temperatureInKelvin, to: .celsius)
+                let celsius = TemperatureUtil.convert(kelvin: temperatureInKelvin, to: .celsius)
                 expect(celsius).to(equal(100))
             }
             
             it("should convert kelvin into fahrenheit") {
-                let fahrenheit = Temperature.convert(kelvin: temperatureInKelvin, to: .fahrenheit)
+                let fahrenheit = TemperatureUtil.convert(kelvin: temperatureInKelvin, to: .fahrenheit)
                 expect(fahrenheit).to(equal(212))
-            }
-            
-            it("should display a celsius suffix for celsius temperatures") {
-                expect(Temperature.suffix(for: .celsius)).to(equal("°C"))
-            }
-            
-            it("should display a fahrenheit suffix for fahrenheit temperatures") {
-                expect(Temperature.suffix(for: .fahrenheit)).to(equal("°F"))
             }
         }
 
