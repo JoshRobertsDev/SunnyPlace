@@ -6,6 +6,7 @@ end
 
 target 'Sunny PlaceTests' do
     use_frameworks!
+    inhibit_all_warnings!
     inherit! :search_paths
     
     pod 'Quick'
