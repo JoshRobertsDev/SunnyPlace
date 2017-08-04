@@ -13,11 +13,13 @@ struct WeatherLocation: Codable {
     var coordinates: Coordinatates
     var weather: [WeatherOverview]
     var keyInfo: WeatherKeyInformation
+    var wind: Wind
     
     enum CodingKeys: String, CodingKey {
         case name
         case coordinates = "coord"
         case weather
         case keyInfo = "main"
+        case wind
     }
 }
