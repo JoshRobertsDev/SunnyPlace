@@ -37,6 +37,7 @@ class WeatherLocationSpec: QuickSpec {
                 expect(weatherLocation.keyInfo.humidity).to(equal(77))
                 expect(weatherLocation.wind.speed).to(equal(20))
                 expect(weatherLocation.wind.degrees).to(equal(45))
+                expect(weatherLocation.timestamp).to(equal(1501860221))
             }
         }
 

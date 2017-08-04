@@ -18,6 +18,7 @@ class WeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var dateTimeLabel: UILabel!
     
     var viewModel: WeatherLocationViewModel? {
         didSet {
@@ -50,12 +51,26 @@ class WeatherCollectionViewCell: UICollectionViewCell {
                 values: [viewModel.pressure],
                 titleFont: .title,
                 valueFont: .value)
+            
+            dateTimeLabel.text = viewModel.dateTimeWeatherRetrieved
         }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
+        
+        [locationNameLabel,
+         descriptionLabel,
+         tempCurrentLabel,
+         tempScaleLabel,
+         tempMinMaxLabel,
+         windLabel,
+         pressureLabel,
+         humidityLabel,
+         dateTimeLabel].forEach {
+            $0?.text = ""
+        }
     }
     
     func attributedText(forString string: String, values: [String], titleFont: UIFont, valueFont: UIFont) -> NSAttributedString {

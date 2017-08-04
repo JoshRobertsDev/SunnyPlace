@@ -30,6 +30,7 @@ class WeatherLocationViewModelSpec: QuickSpec {
                 expect(viewModel.pressure).to(equal("1009hPa"))
                 expect(viewModel.humidity).to(equal("77%"))
                 expect(viewModel.wind).to(equal("45° ↗ 45 mph"))
+                expect(viewModel.dateTimeWeatherRetrieved).to(equal("* 16:23 4 Aug 17"))
                 expect(viewModel.imageName).to(equal("cloudy_bg"))
             }
             

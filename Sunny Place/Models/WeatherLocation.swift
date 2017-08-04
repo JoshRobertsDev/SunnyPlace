@@ -14,6 +14,7 @@ struct WeatherLocation: Codable {
     var weather: [WeatherOverview]
     var keyInfo: WeatherKeyInformation
     var wind: Wind
+    var timestamp: TimeInterval
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -21,5 +22,6 @@ struct WeatherLocation: Codable {
         case weather
         case keyInfo = "main"
         case wind
+        case timestamp = "dt"
     }
 }

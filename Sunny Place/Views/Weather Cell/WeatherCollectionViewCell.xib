@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Medium</string>
         </array>
         <array key="HelveticaNeueLights.ttc">
@@ -77,11 +78,19 @@
                         </label>
                     </subviews>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accurate as of" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvw-aO-eE9">
+                    <rect key="frame" x="262" y="586" width="97" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="4ea-Fr-0XW" firstAttribute="centerX" secondItem="wLc-Pb-1dz" secondAttribute="centerX" id="8NN-cN-Yyp"/>
+                <constraint firstItem="JLT-hD-hDy" firstAttribute="bottom" secondItem="Uvw-aO-eE9" secondAttribute="bottom" constant="64" id="H6e-kR-nyL"/>
                 <constraint firstItem="kiI-3D-a9C" firstAttribute="leading" secondItem="4ea-Fr-0XW" secondAttribute="trailing" id="Isg-jq-GMc"/>
+                <constraint firstItem="JLT-hD-hDy" firstAttribute="trailing" secondItem="Uvw-aO-eE9" secondAttribute="trailing" constant="16" id="Jla-Dc-sn0"/>
                 <constraint firstItem="kiI-3D-a9C" firstAttribute="top" secondItem="4ea-Fr-0XW" secondAttribute="top" constant="12" id="KK5-K8-Jka"/>
                 <constraint firstItem="BbW-0A-IBj" firstAttribute="centerX" secondItem="wLc-Pb-1dz" secondAttribute="centerX" id="SgY-ba-HgK"/>
                 <constraint firstItem="uex-jL-UBE" firstAttribute="centerX" secondItem="wLc-Pb-1dz" secondAttribute="centerX" id="W4B-Dl-lSp"/>
@@ -93,6 +102,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="JLT-hD-hDy"/>
             <connections>
+                <outlet property="dateTimeLabel" destination="Uvw-aO-eE9" id="6YO-mp-ghv"/>
                 <outlet property="descriptionLabel" destination="BbW-0A-IBj" id="1wo-F9-y2e"/>
                 <outlet property="humidityLabel" destination="4PF-Y1-9PN" id="nlk-kW-Q7v"/>
                 <outlet property="locationNameLabel" destination="uex-jL-UBE" id="2xB-eq-bcg"/>

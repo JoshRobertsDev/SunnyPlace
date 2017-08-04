@@ -20,6 +20,7 @@ struct WeatherLocationViewModel {
     var pressure: String
     var humidity: String
     var wind: String
+    var dateTimeWeatherRetrieved: String
     var imageName: String?
     
     init(_ weatherLocation: WeatherLocation) {
@@ -36,6 +37,8 @@ struct WeatherLocationViewModel {
         let windSpeedUnit = WindUtil.SpeedUnit.milesPerHour
         let windSpeed = WindUtil.convert(metresPerSecond: weatherLocation.wind.speed, to: windSpeedUnit)
         self.wind = "\(weatherLocation.wind.degrees)° \(WindUtil.arrow(forDegreeDirection: windDegrees)) \(windSpeed) \(windSpeedUnit.rawValue)"
+        let dateString = DateFormatter.weatherDisplayDate.string(from: Date(timeIntervalSince1970: weatherLocation.timestamp))
+        self.dateTimeWeatherRetrieved = "* " + dateString
         
         if let weather = weatherLocation.weather.first {
             self.imageName = {
