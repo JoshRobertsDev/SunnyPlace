@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rainy_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Frh-cv-uvt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thunderstorm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Frh-cv-uvt">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hfW-Hb-3IE">
@@ -64,6 +64,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rainy_bg" width="960" height="540"/>
+        <image name="thunderstorm_bg" width="720" height="450"/>
     </resources>
 </document>
