@@ -32,6 +32,10 @@ class WeatherLocationViewModelSpec: QuickSpec {
                 expect(viewModel.wind).to(equal("45° ↗ 45 mph"))
                 expect(viewModel.imageName).to(equal("cloudy_bg"))
             }
+            
+            it("should return a valid weather image") {
+                expect(UIImage(named: viewModel.imageName!) != nil).to(beTruthy())
+            }
         }
         
     }
