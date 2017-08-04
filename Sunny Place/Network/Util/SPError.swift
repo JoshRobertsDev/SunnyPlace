@@ -11,4 +11,5 @@ import Foundation
 enum SPError: Error {
     
     case invalidURL(fromString: String)
+    case noData
 }
