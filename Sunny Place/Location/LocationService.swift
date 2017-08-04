@@ -18,12 +18,12 @@ class LocationService: NSObject {
     
     private let locationManager = CLLocationManager()
     var delegate: LocationServiceDelegate?
+    var lastKnownLocation: CLLocation?
     
     override init() {
         super.init()
         locationManager.pausesLocationUpdatesAutomatically = true
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        locationManager.distanceFilter = kCLLocationAccuracyHundredMeters
         locationManager.delegate = self
     }
     
@@ -31,22 +31,15 @@ class LocationService: NSObject {
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
     }
-    
-    func requestLocationUpdates() {
-        
-    }
-    
-    func stopLocationUpdates() {
-        locationManager.stopUpdatingLocation()
-    }
 }
 
 extension LocationService: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // most recent location is at the end
-        if let firstLocation = locations.last {
-            delegate?.didReceiveLocationUpdate(firstLocation)
+        if let mostRecentLocation = locations.last {
+            lastKnownLocation = mostRecentLocation
+            delegate?.didReceiveLocationUpdate(mostRecentLocation)
         }
     }
     
